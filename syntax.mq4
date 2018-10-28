@@ -18,6 +18,8 @@ void OnStart()
     !  // not
 
    if((4 > 30) || (1 != 0)) {
-       Print("There is a fucking line here");
+        Print("There is a fucking line here");
+   } else {
+        Print("There is nothing here");
    }
-  }
+	}
