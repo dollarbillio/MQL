@@ -1,5 +1,8 @@
 **```static type variable```**: this variable value will be the same through out the function's life and will be updated at next tick
-
+```mq5
+static int candleCounter;
+static int candleCounter;
+```
 **```struct MqlRates```**: Create A Price Array to manipulate(e.g sorting) candle based on each candle attribute
 ```mq5
 struct MqlRates 
