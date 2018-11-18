@@ -135,4 +135,26 @@ int  ArrayMaximum(
    int           count=WHOLE_ARRAY    // number of checked elements 
    );
 ```
-**```
+
+**Bollinger Band**
+**```int iBands()```**
+```mq5
+int  iBands( 
+   string              symbol,            // symbol name 
+   ENUM_TIMEFRAMES     period,            // period 
+   int                 bands_period,      // period for average line calculation 
+   int                 bands_shift,       // horizontal shift of the indicator 
+   double              deviation,         // number of standard deviations 
+   ENUM_APPLIED_PRICE  applied_price      // type of price or handle 
+   );
+
+1|int BB_properties = iBands(_Symbol, _Period, 20, 0, 2, PRICE_CLOSE);
+2|CopyBuffer(BB_properties, 0, 0, 10, MiddleBolinger);
+3|CopyBuffer(BB_properties, 1, 0, 10, UpperBollinger);
+4|CopyBuffer(BB_properties, 2, 0, 10, LowerBollinger);
+   
+5|// MA for the current candle
+6|double currMidBB = MiddleBolinger[0];
+7|double currUpperBB = UpperBollinger[0];
+8|double currLowerBB = LowerBollinger[0];
+```
