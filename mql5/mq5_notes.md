@@ -1,4 +1,4 @@
-**```int iRSI()```**: Relative Strength Index
+**```int iRSI();```**: Relative Strength Index. Use ```CopyBuffer()```
 ```mq5
 int  iRSI( 
    string              symbol,            // symbol name 
@@ -8,12 +8,12 @@ int  iRSI(
    );
 ```
 
-**```static type variable```**: this variable value will be the same through out the function's life and will be updated at next tick
+**```static type variable;```**: this variable value will be the same through out the function's life and will be updated at next tick
 ```mq5
 static int candleCounter;
 static int candleCounter;
 ```
-**```struct MqlRates```**: Create A Price Array to manipulate(e.g sorting) candle based on each candle attribute
+**```struct MqlRates;```**: Create A Price Array to manipulate(e.g sorting) candle based on each candle attribute
 ```mq5
 struct MqlRates 
   { 
@@ -30,7 +30,7 @@ struct MqlRates
 1| MqlRate PriceInformation[]; 
 ```
 
-**```bool ArraySetAsSeries```**: Sort A Series of Candles Reversing (From Right to Left, Descending)?
+**```bool ArraySetAsSeries();```**: Sort A Series of Candles Reversing (From Right to Left, Descending)?
 ```mq5
 bool  ArraySetAsSeries( 
    const void&  array[],    // array by reference 
@@ -40,7 +40,7 @@ bool  ArraySetAsSeries(
 1| ArraySetAsSeries(PriceInformation, true);
 ```
 
-**```int CopyHigh```**: Copy High value of candle into a target array
+**```int CopyHigh();```**: Copy High value of candle into a target array
 ```mq5
 int  CopyHigh( 
    string           symbol_name,      // symbol name 
@@ -51,7 +51,7 @@ int  CopyHigh(
    );
 ```
 
-**```int CopyRates```**: Returns the number of copied elements or -1 in case of  an error.
+**```int CopyRates()```**: Returns the number of copied elements or -1 in case of  an error.
 ```mq5
 int  CopyRates( 
    string           symbol_name,       // symbol name 
@@ -80,9 +80,9 @@ int  CopyRates(
 1| CopyRates(Symbol(), Period(), 0, Bars(Symbol(), Period()), PriceInformation);
 ```
 
-**Handling Indicator Stream**
 
-**```int CopyBuffer()```**: [Queue]  of selected **```indicator```**
+
+**```int CopyBuffer()```**: **Handling Indicator Stream**
 ```mq5
 int  CopyBuffer( 
    int       indicator_handle,     // indicator handle 
@@ -109,7 +109,7 @@ int  CopyBuffer(
    );
 ```
 
-**```int Bars```**: Returns number of bars as requested 
+**```int Bars()```**: Returns number of bars as requested 
 ```mq5
 int  Bars( 
    string           symbol_name,     // symbol name 
@@ -151,9 +151,7 @@ int  ArrayMaximum(
    );
 ```
 
-**Bollinger Band**
-
-**```int iBands()```**
+**```int iBands()```**: **Bollinger Band**
 ```mq5
 int  iBands( 
    string              symbol,            // symbol name 
