@@ -25,6 +25,17 @@ bool  ArraySetAsSeries(
 1| ArraySetAsSeries(PriceInformation, true);
 ```
 
+**```int CopyHigh```**: Copy High value of candle into a target array
+```mq5
+int  CopyHigh( 
+   string           symbol_name,      // symbol name 
+   ENUM_TIMEFRAMES  timeframe,        // period 
+   int              start_pos,        // start position 
+   int              count,            // data count to copy 
+   double           high_array[]      // target array to copy 
+   );
+```
+
 **```int CopyRates```**: Returns the number of copied elements or -1 in case of  an error.
 ```mq5
 int  CopyRates( 
