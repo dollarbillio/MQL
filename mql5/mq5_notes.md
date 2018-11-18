@@ -73,4 +73,8 @@ int  Bars(
 ```
 
 **```ENUM_TIMEFRAMES  Period()```**: the value of the current chart timeframe
+**```int PositionsTotal()```**: number of open positions 
+**```string PositionGetSymbol(i) | i is index in PositionsTotal()```**: Return the corresponding symbol of the currently selected positions
+**```string Symbol() or _Symbol```**: Return the symbol of the current chart, not open position
+
 
