@@ -98,5 +98,11 @@ double  SymbolInfoDouble(
 * SYMBOL_BID, SYMBOL_ASK
 * SYMBOL_SWAP_LONG, SYMBOL_SWAP_SHORT
 ```
-
-
+**```int  ArrayMaximum()```**: Return the index of the candle with maximum high in the target array
+```mq5 
+int  ArrayMaximum( 
+   const void&   array[],             // array for search 
+   int           start=0,             // index to start checking with 
+   int           count=WHOLE_ARRAY    // number of checked elements 
+   );
+```
