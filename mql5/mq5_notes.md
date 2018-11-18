@@ -1,3 +1,13 @@
+**```int iRSI()```**: Relative Strength Index
+```mq5
+int  iRSI( 
+   string              symbol,            // symbol name 
+   ENUM_TIMEFRAMES     period,            // period 
+   int                 ma_period,         // averaging period 
+   ENUM_APPLIED_PRICE  applied_price      // type of price or handle 
+   );
+```
+
 **```static type variable```**: this variable value will be the same through out the function's life and will be updated at next tick
 ```mq5
 static int candleCounter;
