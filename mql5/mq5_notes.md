@@ -137,6 +137,7 @@ int  ArrayMaximum(
 ```
 
 **Bollinger Band**
+
 **```int iBands()```**
 ```mq5
 int  iBands( 
