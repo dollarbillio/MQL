@@ -10,6 +10,7 @@ void OnTick()
    int Data=CopyRates(Symbol(), Period(), 0, Bars(Symbol(), Period()), PriceInformation);
    Comment("There are ", Bars(Symbol(), Period()), " in ", Period());
    
+   // Rules to identify up or down candles
    if (PriceInformation[1].close > PriceInformation[2].close) Comment("It is going up");
    if (PriceInformation[1].close <= PriceInformation[2].close) Comment("It is going down");
   }
