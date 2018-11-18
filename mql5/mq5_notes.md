@@ -65,6 +65,34 @@ int  CopyRates(
 1| CopyRates(Symbol(), Period(), 0, Bars(Symbol(), Period()), PriceInformation);
 ```
 
+**Handling Indicator Stream**
+**```int CopyBuffer()```**: Stream values of selected **```indicator```**
+```mq5
+int  CopyBuffer( 
+   int       indicator_handle,     // indicator handle 
+   int       buffer_num,           // indicator buffer number 
+   int       start_pos,            // start position 
+   int       count,                // amount to copy 
+   double    buffer[]              // target array to copy 
+   );
+
+int  CopyBuffer( 
+   int       indicator_handle,     // indicator handle 
+   int       buffer_num,           // indicator buffer number 
+   datetime  start_time,           // start date and time 
+   int       count,                // amount to copy 
+   double    buffer[]              // target array to copy 
+   );
+   
+int  CopyBuffer( 
+   int       indicator_handle,     // indicator handle 
+   int       buffer_num,           // indicator buffer number 
+   datetime  start_time,           // start date and time 
+   datetime  stop_time,            // end date and time 
+   double    buffer[]              // target array to copy 
+   );
+```
+
 **```int Bars```**: Returns number of bars as requested 
 ```mq5
 int  Bars( 
@@ -106,3 +134,4 @@ int  ArrayMaximum(
    int           count=WHOLE_ARRAY    // number of checked elements 
    );
 ```
+**```
