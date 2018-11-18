@@ -72,9 +72,20 @@ int  Bars(
 1| int bars = Bars(_Symbol(), Period())
 ```
 
-**```ENUM_TIMEFRAMES  Period()```**: the value of the current chart timeframe
-**```int PositionsTotal()```**: number of open positions 
-**```string PositionGetSymbol(i) | i is index in PositionsTotal()```**: Return the corresponding symbol of the currently selected positions
-**```string Symbol() or _Symbol```**: Return the symbol of the current chart, not open position
+* **```ENUM_TIMEFRAMES  Period()```**: the value of the current chart timeframe
+* **```int PositionsTotal()```**: number of open positions 
+* **```string PositionGetSymbol(i) | i is index in PositionsTotal()```**: Return the corresponding symbol of the currently selected positions
+* **```string Symbol() or _Symbol```**: Return the symbol of the current chart, not open position
+
+**```double SymbolInfoDouble()```**: Return the ```double``` type value of current symbol
+```mq5
+double  SymbolInfoDouble( 
+   string                   name,       // current symbol 
+   ENUM_SYMBOL_INFO_DOUBLE  prop_id     // identifier of the property 
+   );
+
+* SYMBOL_BID, SYMBOL_ASK
+* SYMBOL_SWAP_LONG, SYMBOL_SWAP_SHORT
+```
 
 
