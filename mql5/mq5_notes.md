@@ -66,13 +66,14 @@ int  CopyRates(
 ```
 
 **Handling Indicator Stream**
-**```int CopyBuffer()```**: Stream values of selected **```indicator```**
+
+**```int CopyBuffer()```**: [Queue]  of selected **```indicator```**
 ```mq5
 int  CopyBuffer( 
    int       indicator_handle,     // indicator handle 
    int       buffer_num,           // indicator buffer number 
    int       start_pos,            // start position 
-   int       count,                // amount to copy 
+   int       count,                // amount to be in the buffer 
    double    buffer[]              // target array to copy 
    );
 
