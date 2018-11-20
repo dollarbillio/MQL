@@ -221,6 +221,7 @@ public class Methods
     }
 }
 ```
+---
 **CLASS**
 ```cs
 using System;
@@ -249,6 +250,38 @@ public class MainClass
     Console.WriteLine(car1.numTires);
     Console.WriteLine(car2.year);
     Console.WriteLine(car3.runs);
+    }
+}
+```
+---
+**CLASS CONSTRUCTOR**
+```cs
+using System;
+class Shape{
+    public string Type;
+    public int Sides;
+    public int Sidelength;
+    public double Area;  
+    // +---------------------------------------------+
+    // |--Class Constructor to set Class Attributes--|
+    // +---------------------------------------------+
+    public Shape(string type, int sides, int sidelength, double area){
+        Type = type;
+        Sides = sides;
+        Sidelength = sidelength;
+        Area = area;
+    }
+    // +-------------------+
+    // |--END CONSTRUCTOR--|
+    // +-------------------+
+}
+class MainClass{
+    public static void Main()
+    {
+        // Create instances
+        Shape square = new Shape("square", 4, 1, 1);
+        Shape bigsquare = new Shape("square", 4, 2, 4);
+        Shape triangle = new Shape("triangle", 3, 3, 3.9); 
     }
 }
 ```
