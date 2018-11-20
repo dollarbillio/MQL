@@ -12,7 +12,7 @@ class MainClass
   }
 }
 ```
-
+---
 **VARIABLE DECLARATION**
 ```cs
 var x = 1;
@@ -26,7 +26,7 @@ string myName = "John";
 char myChar = 'a';
 double myDouble = 1.75;
 ```
-
+---
 **Enums are integers used when an integer is used to specify an option from a fixed amount of options**
 ```cs
 public enum CarType
@@ -44,7 +44,7 @@ public class Tutorial
     }
 }
 ```
-
+---
 **ARRAYS**
 ```cs
 int[] nums = new int[] { 1, 2, 3, 4, 5 };
@@ -58,7 +58,7 @@ int[] nums = new int[10];
 nums[2] = 9; // index_3 = 9
 nums[9] = 2; // index_10 = 2
 ```
-
+---
 **MATRIX**
 ```cs
 int[,] matrix = new int[2,2];
@@ -70,7 +70,7 @@ matrix[1,1] = 4;
 // Same as above
 int[,] predefinedMatrix = new int[2,2] { { 1, 2 }, { 3, 4 } };
 ```
-
+---
 **LISTS**: Dynamically sized WhereAs **Arrays** = Fixed Size
 ```cs
 // +-----------+
@@ -80,13 +80,13 @@ List<int> numbers = new List<int>();
 numbers.Add(1);
 numbers.Add(2);
 numbers.Add(3);
-
+//---
 // Add a range of number into list
 List<int> numbers = new List<int>();
 int[] array = new int[] { 1, 2, 3 };
 // Use .AddRange(ArrayToAdd)
 numbers.AddRange(array);
-
+//---
 // +-----------+
 // |--Strings--|
 // +-----------+
@@ -96,84 +96,82 @@ fruits.Remove("banana");
 fruits.RemoveAt(1);
 // Count the number of items in the list
 Console.WriteLine(fruits.Count);
-
+//---
 // Create a news string list
 List<string> food = new List<string>();
 food.Add("apple");
 food.Add("banana");
-
+//---
 List<string> vegetables = new List<string>();
 vegetables.Add("tomato");
 vegetables.Add("carrot");
-
+//---
 // List Concatenation
 food.AddRange(vegetables);
 Console.WriteLine(food.Count);
 ```
-
+---
 **DICTIONARY**
 ```cs
 // Dictionary<KeyType, ValueType>
 Dictionary<string, long> phonebook = new Dictionary<string, long>();
 phonebook.Add("Alex", 4154346543);
 phonebook["Jessica"] = 4159484588;
-
+//---
 // Check if Key is in Dictionary
 if (phonebook.ContainsKey("Alex"))
 {
     Console.WriteLine("Alex's number is " + phonebook["Alex"]);
 }
-
+//---
 // remove a Key_Value pair in dictionary
 phonebook.Remove("Jessica");
 ```
-
+--
 **STRINGS**
 ```cs
 string emptyString = String.Empty/"";
-
+//---
 // String Concatenation
 string firstName = "Eric";
 string lastName = "Smith";
 string fullName = firstName + " " + lastName;
-
+//---
 // Add string with operators
 string sentence = "I like to play ";
 sentence += "chess.";
-
+//---
 //+----------------------------------+
 //|--TypeCasting: Integer to String--|
 //+----------------------------------+
 int integer = 1;
-string ourString = "Something to be replaced by an int";
-// Change to String
-ourString = integer.ToString();
-
+string ourString = integer.ToString();
+//---
 //+---------------------+
 //|--String Formatting--|
 //+---------------------+
 int x = 1, y = 2;
 int sum = x + y;
 string sumCalculation = String.Format("{0} + {1} = {2}", x, y, sum);
-
+//---
 //+---------------------------------------------+
 //|--string.Substring(StartIndex, TotalLength)--|
 //+---------------------------------------------+
 string fullString = "full string";
 string partOfString = fullString.Substring(5);
 string shorterPart = fullString.Substring(5, 3); // Get 3 indices starting from 5th_index 
-
+//---
 //+---------------------------+
 //|--string.Replace(From,To)--|
 //+---------------------------+
 string newName = name.Replace("John", "Eric");
-
+//---
 //+----------------------------+
 //|--string.IndexOf(ToSearch)--|
 //+----------------------------+
 int ItemIndex = fruit.IndexOf("orange"))
 ```
-
+---
 **FOR LOOP**
 ```cs
 for(int i = 0; i < 16; i++)
@@ -187,5 +185,16 @@ for(int i = 0; i < 16; i++)
     }
 
     Console.WriteLine(i);
+}
+```
+---
+**WHILE LOOP**
+```cs
+int n = 0;
+
+while( n == 0)
+{
+    Console.WriteLine("N is 0");
+    n++;
 }
 ```
