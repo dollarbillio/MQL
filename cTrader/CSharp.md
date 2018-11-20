@@ -27,7 +27,7 @@ char myChar = 'a';
 double myDouble = 1.75;
 ```
 ---
-**Enums are integers used when an integer is used to specify an option from a fixed amount of options**
+**ENUMS are integers used when an integer is used to specify an option from a fixed amount of options**
 ```cs
 public enum CarType
 {
@@ -45,7 +45,7 @@ public class Tutorial
 }
 ```
 ---
-**ARRAYS**
+**ARRAY**
 ```cs
 int[] nums = new int[] { 1, 2, 3, 4, 5 };
 -----
@@ -127,7 +127,7 @@ if (phonebook.ContainsKey("Alex"))
 // remove a Key_Value pair in dictionary
 phonebook.Remove("Jessica");
 ```
---
+---
 **STRINGS**
 ```cs
 string emptyString = String.Empty/"";
