@@ -47,7 +47,7 @@ public class Tutorial
 
 **ARRAYS**
 ```cs
-int[] nums = { 1, 2, 3, 4, 5 };
+int[] nums = new int[] { 1, 2, 3, 4, 5 };
 
 int[] nums = new int[10];
 // Show the array length
