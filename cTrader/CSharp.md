@@ -50,6 +50,7 @@ public class Tutorial
 int[] nums = { 1, 2, 3, 4, 5 };
 
 int[] nums = new int[10];
+// Show the array length
 Console.WriteLine(nums.Length);
 
 // Set the inital size10 array with all elements = 0
@@ -70,8 +71,11 @@ matrix[1,1] = 4;
 int[,] predefinedMatrix = new int[2,2] { { 1, 2 }, { 3, 4 } };
 ```
 
-**Lists**: Dynamically sized WhereAs Arrays = Fixed Size
+**Lists**: Dynamically sized WhereAs **Arrays** = Fixed Size
 ```cs
+// +-----------+
+// |--Numbers--|
+// +-----------+
 List<int> numbers = new List<int>();
 numbers.Add(1);
 numbers.Add(2);
@@ -82,4 +86,28 @@ List<int> numbers = new List<int>();
 int[] array = new int[] { 1, 2, 3 };
 // Use .AddRange(ArrayToAdd)
 numbers.AddRange(array);
+
+// +-----------+
+// |--Strings--|
+// +-----------+
+
+// Remove "banana" 
+fruits.Remove("banana");
+// Remove "banana" at its index [1]
+fruits.RemoveAt(1);
+// Count the number of items in the list
+Console.WriteLine(fruits.Count);
+
+// Create a news string list
+List<string> food = new List<string>();
+food.Add("apple");
+food.Add("banana");
+
+List<string> vegetables = new List<string>();
+vegetables.Add("tomato");
+vegetables.Add("carrot");
+
+// String Concatenation
+food.AddRange(vegetables);
+Console.WriteLine(food.Count);
 ```
