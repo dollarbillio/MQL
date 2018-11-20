@@ -44,3 +44,28 @@ public class Tutorial
     }
 }
 ```
+
+**ARRAYS**
+```cs
+int[] nums = { 1, 2, 3, 4, 5 };
+
+int[] nums = new int[10];
+Console.WriteLine(nums.Length);
+
+// Set the inital size10 array with all elements = 0
+int[] nums = new int[10];
+nums[2] = 9; // index_3 = 9
+nums[9] = 2; // index_10 = 2
+```
+
+**MATRIX**
+```cs
+int[,] matrix = new int[2,2];
+matrix[0,0] = 1;
+matrix[0,1] = 2;
+matrix[1,0] = 3;
+matrix[1,1] = 4;
+
+// Same as above
+int[,] predefinedMatrix = new int[2,2] { { 1, 2 }, { 3, 4 } };
+```
