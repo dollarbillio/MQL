@@ -71,7 +71,7 @@ matrix[1,1] = 4;
 int[,] predefinedMatrix = new int[2,2] { { 1, 2 }, { 3, 4 } };
 ```
 
-**Lists**: Dynamically sized WhereAs **Arrays** = Fixed Size
+**LISTS**: Dynamically sized WhereAs **Arrays** = Fixed Size
 ```cs
 // +-----------+
 // |--Numbers--|
