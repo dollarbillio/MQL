@@ -226,14 +226,29 @@ public class Methods
 using System;
 // +----------------+
 // |--Custom Class--|
-// +----------------+
-class myClass{
-  public string test = "This works!";
+// |----------------+
+public class car
+{
+    public int numTires = 4;
+    public int year = 2000;
+    public bool runs = true;
 }
-class MainClass{
-  public static void Main(){
-    myClass myObject = new myClass();
-    Console.WriteLine(myObject.test);
-  }
+// +----------------+
+// |--MainClass--|
+// |----------------+
+public class MainClass
+{
+    public static void Main()
+    {
+    // Create  3 car_instances
+    car car1 = new car();
+    car car2 = new car();
+    car car3 = new car();
+        
+    // Test code
+    Console.WriteLine(car1.numTires);
+    Console.WriteLine(car2.year);
+    Console.WriteLine(car3.runs);
+    }
 }
 ```
