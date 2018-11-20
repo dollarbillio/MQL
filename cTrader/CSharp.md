@@ -69,3 +69,17 @@ matrix[1,1] = 4;
 // Same as above
 int[,] predefinedMatrix = new int[2,2] { { 1, 2 }, { 3, 4 } };
 ```
+
+**Lists**: Dynamically sized WhereAs Arrays = Fixed Size
+```cs
+List<int> numbers = new List<int>();
+numbers.Add(1);
+numbers.Add(2);
+numbers.Add(3);
+
+// Add a range of number into list
+List<int> numbers = new List<int>();
+int[] array = new int[] { 1, 2, 3 };
+// Use .AddRange(ArrayToAdd)
+numbers.AddRange(array);
+```
