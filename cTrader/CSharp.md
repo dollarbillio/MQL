@@ -48,11 +48,11 @@ public class Tutorial
 **ARRAYS**
 ```cs
 int[] nums = new int[] { 1, 2, 3, 4, 5 };
-
+-----
 int[] nums = new int[10];
 // Show the array length
 Console.WriteLine(nums.Length);
-
+-----
 // Set the inital size10 array with all elements = 0
 int[] nums = new int[10];
 nums[2] = 9; // index_3 = 9
@@ -80,13 +80,13 @@ List<int> numbers = new List<int>();
 numbers.Add(1);
 numbers.Add(2);
 numbers.Add(3);
-//---
+-----
 // Add a range of number into list
 List<int> numbers = new List<int>();
 int[] array = new int[] { 1, 2, 3 };
 // Use .AddRange(ArrayToAdd)
 numbers.AddRange(array);
-//---
+-----
 // +-----------+
 // |--Strings--|
 // +-----------+
@@ -96,16 +96,16 @@ fruits.Remove("banana");
 fruits.RemoveAt(1);
 // Count the number of items in the list
 Console.WriteLine(fruits.Count);
-//---
+-----
 // Create a news string list
 List<string> food = new List<string>();
 food.Add("apple");
 food.Add("banana");
-//---
+-----
 List<string> vegetables = new List<string>();
 vegetables.Add("tomato");
 vegetables.Add("carrot");
-//---
+-----
 // List Concatenation
 food.AddRange(vegetables);
 Console.WriteLine(food.Count);
@@ -117,13 +117,13 @@ Console.WriteLine(food.Count);
 Dictionary<string, long> phonebook = new Dictionary<string, long>();
 phonebook.Add("Alex", 4154346543);
 phonebook["Jessica"] = 4159484588;
-//---
+-----
 // Check if Key is in Dictionary
 if (phonebook.ContainsKey("Alex"))
 {
     Console.WriteLine("Alex's number is " + phonebook["Alex"]);
 }
-//---
+-----
 // remove a Key_Value pair in dictionary
 phonebook.Remove("Jessica");
 ```
@@ -131,41 +131,41 @@ phonebook.Remove("Jessica");
 **STRINGS**
 ```cs
 string emptyString = String.Empty/"";
-//---
+-----
 // String Concatenation
 string firstName = "Eric";
 string lastName = "Smith";
 string fullName = firstName + " " + lastName;
-//---
+-----
 // Add string with operators
 string sentence = "I like to play ";
 sentence += "chess.";
-//---
+-----
 //+----------------------------------+
 //|--TypeCasting: Integer to String--|
 //+----------------------------------+
 int integer = 1;
 string ourString = integer.ToString();
-//---
+-----
 //+---------------------+
 //|--String Formatting--|
 //+---------------------+
 int x = 1, y = 2;
 int sum = x + y;
 string sumCalculation = String.Format("{0} + {1} = {2}", x, y, sum);
-//---
+-----
 //+---------------------------------------------+
 //|--string.Substring(StartIndex, TotalLength)--|
 //+---------------------------------------------+
 string fullString = "full string";
 string partOfString = fullString.Substring(5);
 string shorterPart = fullString.Substring(5, 3); // Get 3 indices starting from 5th_index 
-//---
+-----
 //+---------------------------+
 //|--string.Replace(From,To)--|
 //+---------------------------+
 string newName = name.Replace("John", "Eric");
-//---
+-----
 //+----------------------------+
 //|--string.IndexOf(ToSearch)--|
 //+----------------------------+
