@@ -90,7 +90,6 @@ numbers.AddRange(array);
 // +-----------+
 // |--Strings--|
 // +-----------+
-
 // Remove "banana" 
 fruits.Remove("banana");
 // Remove "banana" at its index [1]
