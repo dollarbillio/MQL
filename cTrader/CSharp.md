@@ -106,7 +106,86 @@ List<string> vegetables = new List<string>();
 vegetables.Add("tomato");
 vegetables.Add("carrot");
 
-// String Concatenation
+// List Concatenation
 food.AddRange(vegetables);
 Console.WriteLine(food.Count);
+```
+
+**DICTIONARY**
+```cs
+// Dictionary<KeyType, ValueType>
+Dictionary<string, long> phonebook = new Dictionary<string, long>();
+phonebook.Add("Alex", 4154346543);
+phonebook["Jessica"] = 4159484588;
+
+// Check if Key is in Dictionary
+if (phonebook.ContainsKey("Alex"))
+{
+    Console.WriteLine("Alex's number is " + phonebook["Alex"]);
+}
+
+// remove a Key_Value pair in dictionary
+phonebook.Remove("Jessica");
+```
+
+**STRINGS**
+```cs
+string emptyString = String.Empty/"";
+
+// String Concatenation
+string firstName = "Eric";
+string lastName = "Smith";
+string fullName = firstName + " " + lastName;
+
+// Add string with operators
+string sentence = "I like to play ";
+sentence += "chess.";
+
+//+----------------------------------+
+//|--TypeCasting: Integer to String--|
+//+----------------------------------+
+int integer = 1;
+string ourString = "Something to be replaced by an int";
+// Change to String
+ourString = integer.ToString();
+
+//+---------------------+
+//|--String Formatting--|
+//+---------------------+
+int x = 1, y = 2;
+int sum = x + y;
+string sumCalculation = String.Format("{0} + {1} = {2}", x, y, sum);
+
+//+---------------------------------------------+
+//|--string.Substring(StartIndex, TotalLength)--|
+//+---------------------------------------------+
+string fullString = "full string";
+string partOfString = fullString.Substring(5);
+string shorterPart = fullString.Substring(5, 3); // Get 3 indices starting from 5th_index 
+
+//+---------------------------+
+//|--string.Replace(From,To)--|
+//+---------------------------+
+string newName = name.Replace("John", "Eric");
+
+//+----------------------------+
+//|--string.IndexOf(ToSearch)--|
+//+----------------------------+
+int ItemIndex = fruit.IndexOf("orange"))
+```
+
+**FOR LOOP**
+```cs
+for(int i = 0; i < 16; i++)
+{
+    if(i % 2 == 1)
+    {
+        // Break entire loop
+        break;
+        // Skip the current iteration
+        continue;
+    }
+
+    Console.WriteLine(i);
+}
 ```
