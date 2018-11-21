@@ -63,17 +63,17 @@ EntryPrice      :Entry price of the position.
 EntryTime       :Entry time of trade associated with a position. The Timezone used is set in the Robot attribute
 GrossProfit     :Gross profit accrued by the order associated with a position.
 HasTrailingStop :When HasTrailingStop set to true,server updates Stop Loss every time position moves in your favor.
-Id	            :The position's unique identifier.
+Id              :The position's unique identifier.
 Label	        :Label can be used to represent the order.
-NetProfit	    :The Net profit of the position.
+NetProfit       :The Net profit of the position.
 Pips	        :Represents the winning or loosing pips of the position.
-Quantity	    :Quantity (lots) traded by the position
-StopLoss	    :The stop loss level (price) of the position.
+Quantity        :Quantity (lots) traded by the position
+StopLoss        :The stop loss level (price) of the position.
 StopLossTriggerMethod   :Trigger method for position's StopLoss
 Swap	                :Swap is the overnight interest rate if any, accrued on the position.
-SymbolCode	            :Symbol code of the position.
-TakeProfit	            :The take profit level of the position.
-TradeType	            :Trade type (Buy/Sell) of the position.
+SymbolCode              :Symbol code of the position.
+TakeProfit              :The take profit level of the position.
+TradeType               :Trade type (Buy/Sell) of the position.
 VolumeInUnits	        :The amount traded by the position.
 
 //--Examples
