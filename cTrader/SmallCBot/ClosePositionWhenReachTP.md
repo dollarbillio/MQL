@@ -1,21 +1,21 @@
 **MAIN CODE**
 ```cs
 protected override void OnStart()
-    {
-        ExecuteMarketOrder(TradeType.Buy, Symbol, 1000, "Bot_1");
-    }
+{
+    ExecuteMarketOrder(TradeType.Buy, Symbol, 1000, "Bot_1");
+}
 protected override void OnTick()
+{
+    // Find the order with label "Bot_1"
+    var position = Positions.Find("Bot_1");
+    
+    // if position is a valid position and gross profit > 10
+    if (position != null && position.GrossProfit > 10)
     {
-        // Find the order with label "Bot_1"
-        var position = Positions.Find("Bot_1");
-        
-        // if position is a valid position and gross profit > 10
-        if (position != null && position.GrossProfit > 10)
-        {
-            ClosePosition(position);
-            Stop();
-        }
+        ClosePosition(position);
+        Stop();
     }
+}
 ```
 ---
 **RELATED DOCUMENTED**
