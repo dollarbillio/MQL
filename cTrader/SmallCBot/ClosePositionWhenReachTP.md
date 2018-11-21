@@ -25,7 +25,7 @@ protected override void OnTick()
 public interface Positions : IEnumerable
 
 Count:  Total number of open positions
-this[int index]:	Find a position by index
+this[int index]: Find a position by index
 Find:   Find a position by its label
 Find:   Find a position by its label and symbol
 Find:   Find a position by its label, symbol and trade type
