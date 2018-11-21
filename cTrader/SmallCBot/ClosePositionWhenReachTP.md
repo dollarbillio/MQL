@@ -55,5 +55,15 @@ volume:     Volume which is closed
 if (position.Volume >= 20000)
     ClosePosition(position, 10000);
 ```
+**Stop()**
+* Completely stop the cBot
+```cs
+public void Stop()
 
+if(Account.Balance < 1000)
+{
+    Stop();
+}
+
+```
 
