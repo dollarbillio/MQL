@@ -40,9 +40,9 @@ Opened:	Subscribe a method that is called each time a position opens
 ```cs
 public Position Find(string label, Symbol symbol, TradeType tradeType)
 
-label	Label to search by
-symbol	Symbol to search by
-tradeType	Trade type to search by
+label	    Label to search by
+symbol	    Symbol to search by
+tradeType   Trade type to search by
 ```
 **ClosePosition(position)**
 ```cs
