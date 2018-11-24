@@ -20,13 +20,13 @@ public event Action Opened
 
 //---
 protected override void OnStart()
- {
-     Positions.Opened += PositionsOnOpened;            
- }
- private void PositionsOnOpened(PositionOpenedEventArgs args)
- {
-     Print("Position opened {0}", args.Position.Label);
- }
+{
+    Positions.Opened += PositionsOnOpened;            
+}
+private void PositionsOnOpened(PositionOpenedEventArgs args)
+{
+    Print("Position opened {0}", args.Position.Label);
+}
 ```
 **PositionOpenedEventArgs**:The arguments of the subscribed event raised when the position opens
 ```cs
