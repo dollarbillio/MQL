@@ -35,7 +35,6 @@ public class PositionOpenedEventArgs : Object
 Position: The position being opened
 
 //---
-
 protected override void OnStart()
 {
     Positions.Opened += Positions_Opened;
