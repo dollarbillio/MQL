@@ -51,6 +51,7 @@ Equity / Margin * 100
 ```UnrealizedGrossProfit```: Gets the Unrealized Gross profit value.
 
 ```UnrealizedNetProfit```: Gets the Unrealized Gross profit value.	
+
 ```cs
 // Example
 // Account Properties
@@ -68,6 +69,23 @@ double margin = Account.Margin;
 double? marginlevel = Account.MarginLevel; 
 ```
 ---
+```[Method] Calculate()```
+* This is where we put our main logic to calculate value of 1 point of the indicator for the given index
+```public void Calculate(int index)```
+```cs
+//...
+public override void Calculate(int index)
+{
+    //This is where we place our indicator's calculation logic.
+}
+//...
+```
+---
+```IsLastBar Property```: Returns true, if Calculate is invoked for the last bar
+
+
+
+
 
 ////////
 
@@ -78,7 +96,7 @@ Calculate	Method	Calculate the value(s) of indicator for the given index.
 Indicator	Method	Indicator class constructor
 IndicatorArea	Property	Defines the area where the indicator is placed.
 Initialize	Method	Custom initialization for the Indicator. This method is invoked when an indicator is launched.
-IsLastBar	Property	Returns true, if Calculate is invoked for the last bar
+
 ToString	Method	The name of the indicator derived class.
 
 
