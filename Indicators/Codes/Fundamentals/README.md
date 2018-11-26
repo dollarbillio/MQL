@@ -1,0 +1,3 @@
+# COVERED
+* ~~DataSeries~~
+* ~~IndicatorDataSeries~~
