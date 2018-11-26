@@ -19,7 +19,7 @@ Result[index] = (MarketSeries.Close[index] + MarketSeries.Open[index]) / 2;
 ```
 ---
 **+----------------+|Built-in methods|+----------------+**
-* Count: Gets the total number of elements contained in the DataSeries.
+* **```Count```**: Gets the total number of elements contained in the DataSeries.
 ```cs
 public int Count{ get; }
     
@@ -35,7 +35,7 @@ protected override void OnTick()
     Print("The last value of Close Series is: {0}", lastCloseValue);
 }
 ```
-* This[int index]: Gets the value in the dataseries at the specified position.
+**```This[int index]```**: Gets the value in the dataseries at the specified position.
 ```cs
 public double this[int index]{ get; }
     
@@ -62,7 +62,7 @@ public override void Calculate(int index)
     Result[index] = sum / Periods;
 }
 ```
-* LastValue:Gets the last value of this DataSeries
+**```LastValue```**:Gets the last value of this DataSeries
 ```cs
 public double LastValue{ get; }
     
@@ -77,7 +77,7 @@ protected override void OnTick()
     MarketSeries.Close.LastValue = 100;
 }
 ```
-* Last(): Access a value in the dataseries certain bars ago
+**```Last()```**: Access a value in the dataseries certain bars ago
 ```cs
 public double Last(int index)
     
