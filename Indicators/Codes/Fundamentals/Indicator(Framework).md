@@ -6,10 +6,9 @@ public class Indicator : Algo, IIndicator
 ```
 * **Members**
 
-```Account [Property]```
-    
-    * Contains information of the current account
-    * Returns IAccount
+```Account [Property]```    
+* Contains information of the current account
+* Returns IAccount
 ```cs
 // Account
 public IAccount Account{ get; }
@@ -18,8 +17,7 @@ if (Account.Balance < 10000)
     Print(Account.Balance);
 ```
 ```Account [Property] => IAccount [Interface]```
-    
-    * Contains information of the current account
+* Contains information of the current account
 ```cs
 public interface IAccount
 ```
@@ -57,6 +55,7 @@ double margin = Account.Margin;
 //Margin level = Equity / Margin * 100
 double? marginlevel = Account.MarginLevel; 
 ```
+////////
 
 ```cs
 	Type	Summary
