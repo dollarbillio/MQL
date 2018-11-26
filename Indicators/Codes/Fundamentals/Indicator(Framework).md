@@ -5,7 +5,7 @@
 public class Indicator : Algo, IIndicator
 ```
 * **Members**
-
+---
 ```Account [Property]```    
 * Contains information of the current account
 * Returns IAccount
@@ -21,24 +21,36 @@ if (Account.Balance < 10000)
 ```cs
 public interface IAccount
 ```
-```cs
-// All Property
-AccountType: Returns the current account type.
-Balance: Returns the balance of the current account.
-BrokerName: Returns the broker name of the current account.
-Currency: Returns the currency of the current account, e.g. "EUR".
-Equity: Represents the equity of the current account (balance minus Unrealized Net Loss plus Unrealized Net Profit plus Bonus).
-FreeMargin: Represents the free margin of the current account.
-IsLive: Defines if the account is Live or Demo. True if the Account is Live, False if it is a Demo.
-Margin: Represents the margin of the current account.
-MarginLevel: Represents the margin level of the current account. Margin level (in %) is calculated using this formula: 
+* All Property
+
+```AccountType```: Returns the current account type.
+
+```Balance```: Returns the balance of the current account.
+
+```BrokerName```: Returns the broker name of the current account.
+
+```Currency```: Returns the currency of the current account, e.g. "EUR".
+
+```Equity```: Represents the equity of the current account (balance minus Unrealized Net Loss plus Unrealized Net Profit plus Bonus).
+
+```FreeMargin```: Represents the free margin of the current account.
+
+```IsLive```: Defines if the account is Live or Demo. True if the Account is Live, False if it is a Demo.
+
+```Margin```: Represents the margin of the current account.
+
+```MarginLevel```: Represents the margin level of the current account. Margin level (in %) is calculated using this formula: 
 Equity / Margin * 100
-Number: Returns the number of the current account, e.g. 123456.
-PreciseLeverage	Gets the precise account leverage value.
-StopOutLevel: Stop Out level is a lowest allowed Margin Level for account. If Margin Level is less than Stop Out, position will be closed sequentially until Margin Level is greater than Stop Out.
-UnrealizedGrossProfit: Gets the Unrealized Gross profit value.
-UnrealizedNetProfit: Gets the Unrealized Gross profit value.	
-```
+
+```Number```: Returns the number of the current account, e.g. 123456.
+
+```PreciseLeverage```: Gets the precise account leverage value.
+
+```StopOutLevel```: Stop Out level is a lowest allowed Margin Level for account. If Margin Level is less than Stop Out, position will be closed sequentially until Margin Level is greater than Stop Out.
+
+```UnrealizedGrossProfit```: Gets the Unrealized Gross profit value.
+
+```UnrealizedNetProfit```: Gets the Unrealized Gross profit value.	
 ```cs
 // Example
 // Account Properties
@@ -55,6 +67,8 @@ double margin = Account.Margin;
 //Margin level = Equity / Margin * 100
 double? marginlevel = Account.MarginLevel; 
 ```
+---
+
 ////////
 
 ```cs
