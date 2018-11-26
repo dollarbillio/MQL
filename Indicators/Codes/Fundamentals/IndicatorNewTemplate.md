@@ -1,3 +1,27 @@
+**Indicator aka newTemplate**
+* Template for indicator creation 
+* Contains Abstract ```Method```
+```cs
+public class Indicator : Algo, IIndicator
+```
+* **Members**
+```[Property] Account```: Contains information of the current account
+
+
+```cs
+	Type	Summary
+
+Calculate	Method	Calculate the value(s) of indicator for the given index.
+Indicator	Method	Indicator class constructor
+IndicatorArea	Property	Defines the area where the indicator is placed.
+Initialize	Method	Custom initialization for the Indicator. This method is invoked when an indicator is launched.
+IsLastBar	Property	Returns true, if Calculate is invoked for the last bar
+ToString	Method	The name of the indicator derived class.
+
+
+
+
+
 **```IIndicator Interface```**
 * Base class for all indicator
 ```cs
