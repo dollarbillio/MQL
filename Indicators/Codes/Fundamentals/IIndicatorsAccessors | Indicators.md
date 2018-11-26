@@ -1,3 +1,54 @@
+**```IIndicator Interface```**
+* Base class for all indicator
+```cs
+public interface IIndicator
+
+// Built-In methods
+Calculate: Method to calculate the value(s) of indicator for given index, will be rolling
+    public void Calculate(int index)
+
+// Example_1
+[Parameter("Period", DefaultValue = 14)]
+public int Period { get; set; }
+//...
+public override void Calculate(int index)
+{
+    // Calculate value at specified index
+    
+    // if the index is less than Period exit
+    if(index < Period)
+        return;
+        
+    // Maximum returns the largest number in the Series in the range [Series[index-Period], Series[index]]
+    double high = MarketSeries.High.Maximum(Period);
+    // Minimum returns the smallest number in the Series in the range [index - Period, index]
+    double low = MarketSeries.Low.Minimum(Period);
+    double center = (high + low) / 2;
+    // Display Result of Indicator
+    Result[index] = center;
+}
+
+// Example_2: SimpleMovingAverage
+[Parameter]
+public DataSeries Source { get; set; }
+[Parameter("Periods", DefaultValue = 25)]
+public int Periods { get; set; }
+//...
+public override void Calculate(int index)
+{ 
+    // Simple moving average calculation
+    double sum = 0.0;
+    for (int i = index - Periods + 1; i <= index; i++)
+    {
+        sum += Source[i];
+    }
+    Result[index] = sum / Periods;
+}
+```
+
+
+
+
 **IIndicatorsAccessors**
 * Accessor to Indicators
 ```cs
@@ -77,55 +128,6 @@ PriceROC	The Price Rate of Change indicator is the percentage change of the curr
 PriceVolumeTrend	The Price Volume Trend indicator shows the relationship between price and volume.
 RainbowOscillator	The Rainbow Oscillator is a process of repetitive smoothing of simple moving averages resulting in a full spectrum of trends.
 RelativeStrengthIndex	The Relative Strength Index indicator measures turns in price by measuring turns in momentum.
-```
-```SimpleMovingAverage```: The simple moving average smoothes the price data producing a trend indicator
-```cs
-public SimpleMovingAverage SimpleMovingAverage(DataSeries source, int periods)
-
-//--
-source	The source data used for SMA calculation.
-periods	The periods used in the calculation.
-
-//--Return
-public interface SimpleMovingAverage : MovingAverage, IIndicator
-
-[Indicator]
-public class SimpleMovingAverageExample : Indicator
-{
-    [Parameter]
-    public DataSeries Source { get; set; }
-    [Parameter(DefaultValue = 14, MinValue = 2)]
-    public int Periods { get; set; }
-    [Output("Result", Color = Colors.Orange)]
-    public IndicatorDataSeries Result { get; set; }
-    private SimpleMovingAverage _simpleMovingAverage;
-    protected override void Initialize()
-    {
-        _simpleMovingAverage = Indicators.SimpleMovingAverage(Source, Periods);
-    }
-    public override void Calculate(int index)
-    {
-        var average = _simpleMovingAverage.Result[index];
-        double sum = 0;
-        for (var period = 0; period < Periods; period++)
-        {
-            sum += Math.Pow(Source[index - period] - average, 2.0);
-        }
-        Result[index] = Math.Sqrt(sum / Periods);
-    }
-}
-
-+---------| Example |---------+
-private SimpleMovingAverage sma;
-protected override void Initialize()
-{
-    sma = Indicators.SimpleMovingAverage(MarketSeries.Close, 14);
-}
-public override void Calculate(int index)
-{
-    Result[index] = sma.Result[index]; 
-}
-```
 StandardDeviation	The Standard Deviation indicator shows volatility.
 StochasticOscillator	The Stochastic Oscillator is a momentum indicator that aims to show price reversals by comparing the closing price to the price range.
 StochasticOscillator	Initializes the StochasticOscillator Indicator instance for a specific timeframe
@@ -155,5 +157,4 @@ WilliamsAccumulationDistribution	The Williams Accumulation Distribution indicato
 WilliamsAccumulationDistribution	Initializes the WilliamsAccumulationDistribution indicator instance for a specific timeframe
 WilliamsPctR	The Williams Percent R indicator is a momentum indicator measuring overbought and oversold levels.
 WilliamsPctR	Initializes the WilliamsPctR indicator instance for a specific timeframe
-
 ```
