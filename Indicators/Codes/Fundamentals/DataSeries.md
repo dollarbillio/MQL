@@ -19,6 +19,7 @@ Result[index] = (MarketSeries.Close[index] + MarketSeries.Open[index]) / 2;
 ```
 ---
 **+----------------+|Built-in methods|+----------------+**
+
 **```Count```**: Gets the total number of elements contained in the DataSeries.
 ```cs
 public int Count{ get; }
