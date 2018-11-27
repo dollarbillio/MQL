@@ -12,7 +12,12 @@ public IndicatorDataSeries Result { get; set; }
 // Example2
 [Output("Result")]
 public IndicatorDataSeries Result { get; set; }
+
+// Set _dataSeries into a hidden series(not displayed on the chart) 
+//  but is used for calculation only
 private IndicatorDataSeries _dataSeries;
+
+// Same
 private SimpleMovingAverage _simpleMovingAverage;
 protected override void Initialize()
 {
@@ -46,8 +51,3 @@ public override void Calculate(int index)
 }
 ```
 ---
-
-```cs
-
-
-```
