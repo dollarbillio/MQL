@@ -133,6 +133,15 @@ phonebook.Remove("Jessica");
 **STRINGS**
 ```cs
 string emptyString = String.Empty/"";
+
+// Index string
+string[index];
+
+// IndexOf() returns the starting index of the slice string
+string.IndexOf("");
+
+// Substring() returns the substring
+string.Substring(startIndex, numberChar);
 -----
 // String Concatenation
 string firstName = "Eric";
@@ -148,6 +157,12 @@ Console.WriteLine(sentence.length);
 
 // ToUpper() method changes to upper case
 Console.WriteLine("sentence".ToUpper());
+
+// ToLower() method
+"sentence".ToLower();
+
+// .Contains() method return bool?
+"sentence".Contains("ence");
 -----
 //+----------------------------------+
 //|--TypeCasting: Integer to String--|
