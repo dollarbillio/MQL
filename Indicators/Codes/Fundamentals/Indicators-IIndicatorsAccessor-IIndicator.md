@@ -57,8 +57,7 @@ public override void Calculate(int index)
 public interface IIndicator
 ```
 * Base interface for all Indicators
-**```[Method] Calculate()```**
-* Method to calculate the value(s) of indicator for given index.
+* **```[Method] Calculate()```**: Method to calculate the value(s) of indicator for given index.
 ```cs
 //...Example 1
 [Parameter("Period", DefaultValue = 14)]
