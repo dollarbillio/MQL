@@ -145,6 +145,9 @@ sentence += "chess";
 
 // length of string
 Console.WriteLine(sentence.length);
+
+// ToUpper() method changes to upper case
+Console.WriteLine("sentence".ToUpper());
 -----
 //+----------------------------------+
 //|--TypeCasting: Integer to String--|
