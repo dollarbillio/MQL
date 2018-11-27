@@ -1,0 +1,4 @@
+* Math() Method
+```cs
+Math()
+```
