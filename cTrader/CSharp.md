@@ -7,8 +7,10 @@ class MainClass
   public static void Main (string[] args) 
   {
     //Create Variables Here
-    
     Console.WriteLine ("Hello World");
+    
+    // Keep the console window open
+    Console.ReadLine();
   }
 }
 ```
