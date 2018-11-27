@@ -141,7 +141,10 @@ string fullName = firstName + " " + lastName;
 -----
 // Add string with operators
 string sentence = "I like to play ";
-sentence += "chess.";
+sentence += "chess";
+
+// length of string
+Console.WriteLine(sentence.length);
 -----
 //+----------------------------------+
 //|--TypeCasting: Integer to String--|
