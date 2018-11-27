@@ -6,6 +6,9 @@ public class Indicator : Algo, IIndicator
 ```
 * **Members**
 ---
+```[Method] Indicator()```: Indicator Class Constructor
+* Default, don't do anything
+---
 ```Account [Property]```    
 * Contains information of the current account
 * Returns IAccount
@@ -82,22 +85,48 @@ public override void Calculate(int index)
 ```
 ---
 ```IsLastBar Property```: Returns true, if Calculate is invoked for the last bar
-
-
-
-
-
-////////
-
 ```cs
-	Type	Summary
+public bool IsLastBar{ get; }
 
-Calculate	Method	Calculate the value(s) of indicator for the given index.
-Indicator	Method	Indicator class constructor
-IndicatorArea	Property	Defines the area where the indicator is placed.
-Initialize	Method	Custom initialization for the Indicator. This method is invoked when an indicator is launched.
+public override void Calculate(int index)
+   if (IsLastBar)
+   {
+       // this is the current (last) index
+   }
+```
+---
+```IsRealTime Property```: Returns true if the processing real time incoming data
+```cs
+public bool IsRealTime{ get; }
 
-ToString	Method	The name of the indicator derived class.
+public override void Calculate(int index)
+   if (IsRealTime)
+   {
+       //Place the code-logic that you want to be calculated on incoming live data
+   }
+```
+---
+```[Method] Initialize```: Custom initialization for the Indicator. This method is invoked when an indicator is launched.
+```cs
+protected virtual void Initialize()
+
+//...
+protected override void Initialize()
+{
+    //Place your Initialization logic here
+}
+```
+---
+```[Method] ToString```: The name of the indicator derived class
+```cs
+public override string ToString()
+
+private SampleSMA sma;
+//...
+sma = Indicators.GetIndicator<SampleSMA>(Source, Period);
+Print(sma.ToString());
+```
+---
 
 
 
