@@ -1,6 +1,6 @@
 # DataSeries
 ---
-* List of values, typically used to represent market price series.
+* List of Read_Only values, typically used to represent market price series.
 * The values are accessed with an array-like [] operator.
 * Can be used at [Parameter] to choose High, Open, Close, Low
 ```cs
