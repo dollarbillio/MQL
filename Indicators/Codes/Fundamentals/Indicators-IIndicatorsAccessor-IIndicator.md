@@ -110,11 +110,12 @@ protected override void Initialize()
 }
 ```
 ---
-**```cs
+```cs
 public interface MovingAverage : IIndicator
-```**
+```
 * Inherits from IIndicator Interface
 *  ```.Result``` returns ```IndicatorDataSeries```
+
 ```cs
 private MovingAverage ma;
 protected override void Initialize()
