@@ -213,6 +213,7 @@ for(int i = 0; i < 16; i++)
 ---
 **WHILE LOOP**
 ```cs
+// Check condition first, do the code later
 int n = 0;
 
 while( condition )
@@ -220,6 +221,15 @@ while( condition )
     Code here
     increment++;
 }
+
+//---
+// Do the code first, check condition later 
+int n = 6;
+do 
+{
+    console.WriteLine(n);
+    n--;
+} while (n <=5);
 ```
 ---
 **METHOD**
