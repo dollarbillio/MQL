@@ -1,11 +1,12 @@
-# DataSeries
+# DataSeries aka realtime market price series
+```cs
+public interface DataSeries
+```
 ---
 * List of Read_Only values, typically used to represent market price series.
 * The values are accessed with an array-like [] operator.
 * Can be used at [Parameter] to choose High, Open, Close, Low
 ```cs
-public interface DataSeries
- 
 //--Example--
 [Parameter]
 public DataSeries Source { get; set; }
@@ -84,7 +85,10 @@ protected override void OnTick()
 }
 ```
 ---
-```public double Last(int index)```: Access a value in the dataseries certain bars ago
+```cs
+public double Last(int index)
+```
+* Access a value in the dataseries certain bars ago
 ```cs
 //--Example
 double value = MarketSeries.Close.Last(5);
