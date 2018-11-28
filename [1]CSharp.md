@@ -215,10 +215,10 @@ for(int i = 0; i < 16; i++)
 ```cs
 int n = 0;
 
-while( n == 0)
+while( condition )
 {
-    Console.WriteLine("N is 0");
-    n++;
+    Code here
+    increment++;
 }
 ```
 ---
