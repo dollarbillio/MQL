@@ -87,18 +87,15 @@ public long LotSize{ get; }
 ---
 ```cs
 public MarketHours MarketHours{ get; }
-```
-```cs
+
 public interface MarketHours
 ```
 * Access to symbol's trading sessions schedule
+**Members** of ```public interface MarketHours```
 ```cs
 public IReadonlyList Sessions{ get; }	
 ```
 * List of all symbol's trading sessions
-
-
-
 ```cs
 public bool IsOpened(DateTime datetime)
 ```
