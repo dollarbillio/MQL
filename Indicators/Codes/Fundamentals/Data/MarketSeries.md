@@ -77,8 +77,8 @@ Print("{0}", MarketSeries.OpenTime[index].Hour);
 public interface TimeSeries
 ```
 * A series of values that represent time like MarketSeries.OpenTime
-* Available ```members``` of TimeSeries
----
+
+**Available ```members``` of TimeSeries**
 * ```Count```: Gets the number of elements contained in the series.
 * ```this[int index]```: Returns the DateTime value at the specified index.
 * ```LastValue```: Gets the last value of this time series.
