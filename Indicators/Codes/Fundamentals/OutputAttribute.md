@@ -29,7 +29,6 @@ public IndicatorDataSeries Result { get; set; }
 ```cs
 public Colors Color{ get; set; }
 ```
----
 * Gets or sets the Color of the Output property. This Color will be used when the line for this Output is plotted.
 ```cs
 //The result is plotted in Turquoise.
