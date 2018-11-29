@@ -194,6 +194,7 @@ if(volume < Symbol.VolumeInUnitsMin)
 ```cs
 public double VolumeInUnitsStep{ get; }
 
+//---
 if(volume + Symbol.VolumeInUnitsStep <= Symbol.VolumeInUnitsMax)
 {
     volume += Symbol.VolumeInUnitsStep;
