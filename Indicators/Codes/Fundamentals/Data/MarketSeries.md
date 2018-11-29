@@ -11,6 +11,7 @@ var openTime = MarketSeries.OpenTime.LastValue;
 * Market series of the current symbol and timeframe
 * Access to Open, High, Low, Close, Typical, Median and Weighted Price, Open Time and current Timeframe
 ---
+---
 **Returns**
 ```cs
 public interface MarketSeries
@@ -27,6 +28,7 @@ double open = MarketSeries.Open[index];
 * Access to the Open, Hight, Low, Close, Median, Typical, Weighted price series
 as well as OpenTime for the current symbol and timeframe.
 ---
+---
 **Members of MarketSeries**
 ```cs
 public DataSeries Close{ get; }
@@ -42,7 +44,7 @@ protected override void Initialize()
 }
 ```
 * Close price series of historical trendbars.
-* Same with ```High, Low, Open```
+* Same with ```High, Low, Open, Typical, WeightedClose```
 ---
 ```cs
 public DataSeries Median{ get; }
@@ -77,9 +79,9 @@ public interface TimeSeries
 * A series of values that represent time like MarketSeries.OpenTime
 * Available ```members``` of TimeSeries
 ---
-```Count```: Gets the number of elements contained in the series.
-```this[int index]```: Returns the DateTime value at the specified index.
-```LastValue```: Gets the last value of this time series.
+* ```Count```: Gets the number of elements contained in the series.
+* ```this[int index]```: Returns the DateTime value at the specified index.
+* ```LastValue```: Gets the last value of this time series.
 ---
 ```cs
 public int GetIndexByExactTime(DateTime dateTime)	
@@ -104,4 +106,68 @@ public DateTime Last(int index)
 DateTime openTime = MarketSeries.OpenTime.Last[5];
 ```
 * Access a value in the dataseries certain bars ago
+---
+---
+```cs
+public string SymbolCode{ get; }
 
+//---
+Print("{0}", MarketSeries.SymbolCode);  
+
+Symbol eurUsd = MarketData.GetSymbol("EURUSD");
+MarketSeries seriesEurUsd = MarketData.GetSeries(eurUsd, TimeFrame.Daily);
+Print(seriesEurUsd.SymbolCode);
+```
+* The code representation of the symbol that the MarketSeries is subscribed to
+---
+---
+```cs
+public DataSeries TickVolume{ get; }
+
+//---
+public override void Calculate(int index)
+{
+    double currentVolume = MarketSeries.TickVolume[index];
+    double previousVolume = MarketSeries.TickVolume[index-1];
+}
+```
+* Volume of Ticks for Historical Trendbars
+---
+---
+```cs
+public TimeFrame TimeFrame{ get; }
+
+//---
+Print("{0}", MarketSeries.TimeFrame); 
+
+Symbol eurUsd = MarketData.GetSymbol("EURUSD");
+MarketSeries seriesEurUsd = MarketData.GetSeries(eurUsd, TimeFrame.Daily);
+Print(seriesEurUsd.TimeFrame);
+```
+* The timeframe that the MarketSeries is subscribed to
+```cs
+public class TimeFrame : Object
+
+//---
+if(TimeFrame  < TimeFrame.Daily)
+    Print("Intraday Trading"); 
+```
+---
+**Available time frame**
+
+* ```Hour```: 1 hour Timeframe
+* ```Minute```:	1 Minute Timeframe
+* ```Minute10```: 10 Minute Timeframe
+* ```Minute15```: 15 Minute Timeframe
+* ```Minute2```: 2 Minute Timeframe
+* ```Minute20```: 20 Minute Timeframe
+* ```Minute3```: 3 Minute Timeframe
+* ```Minute30```: 30 Minute Timeframe
+* ```Minute4```: 4 Minute Timeframe
+* ```Minute45```: 45 Minute Timeframe
+* ```Minute5```: 5 Minute Timeframe
+* ```Minute6```: 6 Minute Timeframe
+* ```Minute7```: 7 Minute Timeframe
+* ```Minute8```: 8 Minute Timeframe
+* ```Minute9```: 9 Minute Timeframe
+* ```ToString```: Convert the TimeFrame property to a string
