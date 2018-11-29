@@ -91,7 +91,7 @@ public MarketHours MarketHours{ get; }
 public interface MarketHours
 ```
 * Access to symbol's trading sessions schedule
-**Members** of ```public interface MarketHours```
+* **Members** of ```public interface MarketHours```
 ```cs
 public IReadonlyList Sessions{ get; }	
 ```
