@@ -66,7 +66,7 @@ public IndicatorDataSeries SMA { get; set; }
 ```cs
 public sealed enum LineStyle
 ```
-**Specify LineStyle
+**Specify LineStyle***
 * ```Dots```: A dotted line: .....
 * ```DotsRare```: A dotted line, large gap between dots: . . . .
 * ```DotsVeryRare```:A dotted line, extra large gap between dots: .   .   .   .
@@ -89,7 +89,8 @@ public IndicatorDataSeries outputLinesDots { get; set; }
 public IndicatorDataSeries outputSolid { get; set; }
 ```
 ---
-Name	The plot name
+Name
+
 ---
 ```cs
 public PlotType PlotType{ get; set; }
