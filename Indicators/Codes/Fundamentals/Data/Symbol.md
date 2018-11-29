@@ -104,7 +104,6 @@ public bool IsOpened(DateTime datetime)
 public TimeSpan TimeTillClose()
 ```
 * Time left till end of current trading session. Returns 0 if session is not active
----
 ```cs
 public TimeSpan TimeTillOpen()
 ```
