@@ -26,25 +26,30 @@ static int GetDay(int dayNum)
 }
 ```
 ---
-* **2-D Array [,]**
+* **N dimensional Array**
 ```cs
-int[,] twoDArray = {
-    {1, 2},
-    {3, 4},
-    {5, 6}
-};
+// Two-dimensional array.
+int[,] array2D = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+// The same array with dimensions specified.
+int[,] array2Da = new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+// A similar array with string elements.
+string[,] array2Db = new string[3, 2] { { "one", "two" }, { "three", "four" },
+                                        { "five", "six" } };
 
-Console.WriteLine(twoDArray[0, 1); 
+// Three-dimensional array.
+int[, ,] array3D = new int[,,] { { { 1, 2, 3 }, { 4, 5, 6 } }, 
+                                 { { 7, 8, 9 }, { 10, 11, 12 } } };
+// The same array with dimensions specified.
+int[, ,] array3Da = new int[2, 2, 3] { { { 1, 2, 3 }, { 4, 5, 6 } }, 
+                                       { { 7, 8, 9 }, { 10, 11, 12 } } };
 
-//---
->>> 2
-```
-```cs
-// when not having any values assigned to newArray, initialize with new array with rows and columns
-int[,] newArray = new int[2, 3]; // 2 rows, 3 columns
-
-```
-* Put on more commas for more dimension
-```cs
-int [,,,] newArray = new int [,,,];
+// Accessing array elements.
+System.Console.WriteLine(array2D[0, 0]);
+System.Console.WriteLine(array2D[0, 1]);
+System.Console.WriteLine(array2D[1, 0]);
+System.Console.WriteLine(array2D[1, 1]);
+System.Console.WriteLine(array2D[3, 0]);
+System.Console.WriteLine(array2Db[1, 0]);
+System.Console.WriteLine(array3Da[1, 0, 1]);
+System.Console.WriteLine(array3D[1, 1, 2]);
 ```
