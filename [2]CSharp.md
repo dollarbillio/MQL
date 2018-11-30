@@ -54,7 +54,7 @@ System.Console.WriteLine(array3Da[1, 0, 1]);
 System.Console.WriteLine(array3D[1, 1, 2]);
 ```
 ---
-* Error Handling: ```Try{} Catch(){}```
+* **Error Handling**: ```Try{} Catch(){}```
 ```cs
 try 
 {
