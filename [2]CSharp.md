@@ -53,3 +53,19 @@ System.Console.WriteLine(array2Db[1, 0]);
 System.Console.WriteLine(array3Da[1, 0, 1]);
 System.Console.WriteLine(array3D[1, 1, 2]);
 ```
+---
+* Error Handling: ```Try{} Catch(){}```
+```cs
+try 
+{
+    Console.WriteLine("Enter a Number ");
+	int num1 = Convert.ToInt16(Console.ReadLine());
+    Console.WriteLine("Enter another Number: ");
+	int num2 = Convert.ToInt16(Console.ReadLine());
+			
+	Console.WriteLine(num1 / num2);
+} catch (Exception e) // Exception class
+{
+    Console.WriteLine(e.Message);
+}
+```
