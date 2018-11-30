@@ -1,12 +1,12 @@
-* Math() Method
+* **Math() Method**
 ```cs
 Math()
 ```
-* Type Convert
+* **Type Convert**
 ```cs
 int age = Convert.ToInt16("45");
 ```
-* Switch Statement
+* **Switch Statement**
 ```cs
 static int GetDay(int dayNum)
 {
@@ -24,4 +24,18 @@ static int GetDay(int dayNum)
             dayName = "Invalid dayNum";
     }
 }
+```
+---
+* **2-D Array [,]**
+```cs
+int[,] twoDArray = {
+    {1, 2},
+    {3, 4},
+    {5, 6}
+};
+
+Console.WriteLine(twoDArray[0, 1); 
+
+//---
+>>> 2
 ```
