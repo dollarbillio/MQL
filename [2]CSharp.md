@@ -41,6 +41,10 @@ Console.WriteLine(twoDArray[0, 1);
 ```
 ```cs
 // when not having any values assigned to newArray, initialize with new array with rows and columns
-int[,] newArray = new int[2, 3] // 2 rows, 3 columns
+int[,] newArray = new int[2, 3]; // 2 rows, 3 columns
 
+```
+* Put on more commas for more dimension
+```cs
+int [,,,] newArray = new int [,,,];
 ```
