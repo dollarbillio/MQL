@@ -39,3 +39,8 @@ Console.WriteLine(twoDArray[0, 1);
 //---
 >>> 2
 ```
+```cs
+// when not having any values assigned to newArray, initialize with new array with rows and columns
+int[,] newArray = new int[2, 3] // 2 rows, 3 columns
+
+```
