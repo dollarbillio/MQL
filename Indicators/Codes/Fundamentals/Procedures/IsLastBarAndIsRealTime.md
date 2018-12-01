@@ -3,7 +3,6 @@
 * the IsLastBar property can be checked, to determine if
 the index parameter of the Calculate method, is that of the last bar
 ---
----
 ```cs
 [Indicator(IsOverlay = true, TimeZone = TimeZones.UTC)]
 public class TimeInDifferentParts : Indicator
