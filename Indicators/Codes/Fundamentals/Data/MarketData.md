@@ -15,6 +15,8 @@ _md = MarketData.GetMarketDepth("GBPUSD");
 public interface MarketData
 ```
 **MEMBERS**
+---
+---
 * MarketDepth
 ```cs
 public MarketDepth GetMarketDepth(string symbolCode)
@@ -25,6 +27,7 @@ MarketDepth md = MarketData.GetMarketDepth("EURUSD");
 ```cs
 public interface MarketDepth
 ```
+* 
 * ```IReadonlyList MarketData.GetMarketDepth("EURUSD).Ask/BidEntries```:
 ```cs
 public IReadonlyList Ask/BidEntries{ get; }
@@ -32,9 +35,9 @@ public IReadonlyList Ask/BidEntries{ get; }
 //--
 Count	The total number of elements contained in the collection
 this[int index]	Represents the item contained in the collection at a specific index
+``
+* ```MarketData.GetMarketDepth("EURUSD).Updated```
 ```cs
-* MarketData.GetMarketDepth("EURUSD).Updated
-```cd
 public event Action Updated
 
 MarketDepth _marketDepth;
