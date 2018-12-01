@@ -17,4 +17,9 @@ public class SampleEMA : Indicator
 * ```Internet```: Access to Internet or other networks.
 * ```Registry```: Access to windows registry.
 * ```FullAccess```:	The unlimited access rights. Algorithms which declare FullAccess as access rights can use all the power of .NET framework including import WinApi functions, use the .NET Reflection, creating windows, etc.
- 
+---
+**Multiple ```AccessRights```**
+```cs
+[Indicator(TimeZone = TimeZones.UTC, AccessRights = AccessRights.Internet | AccessRights.Registry)]
+public class MyIndicator : Indicator
+```
