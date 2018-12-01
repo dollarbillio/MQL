@@ -1,23 +1,58 @@
-```Indicator.MarketData```
-```Robot.MarketData```
+```Indicator.MarketData | Robot.MarketData | Algo.MarketData```
 ```cs 
 public MarketData MarketData{ get; }
+
+//--
+private MarketDepth _md;
+_md = MarketData.GetMarketDepth("GBPUSD");
 ```
 * Provides access to Depth of Market Data
 * Return ```MarketData```
 ---
-MEMBERS:
 ---
-```cs
 
+```cs
+public interface MarketData
 ```
-* Access to MarketDepth Ask Entries, Bid Entries and the event at which the market depth gets updated
+**MEMBERS**
+* MarketDepth
 ```cs
 public MarketDepth GetMarketDepth(string symbolCode)
 
+//---
 MarketDepth md = MarketData.GetMarketDepth("EURUSD");
-
+```
+```cs
 public interface MarketDepth
+```
+* ```IReadonlyList MarketData.GetMarketDepth("EURUSD).Ask/BidEntries```:
+```cs
+public IReadonlyList Ask/BidEntries{ get; }
+
+//--
+Count	The total number of elements contained in the collection
+this[int index]	Represents the item contained in the collection at a specific index
+```cs
+* MarketData.GetMarketDepth("EURUSD).Updated
+```cd
+public event Action Updated
+
+MarketDepth _marketDepth;
+protected override void Initialize()
+{
+    _marketDepth = MarketData.GetMarketDepth(Symbol);
+    // subscribe to event Updated
+    _marketDepth.Updated += MarketDepthUpdated;
+}
+// user defined function MarketDepthUpdated
+void MarketDepthUpdated()
+{
+    // Do something
+}
+```
+---
+---
+
 
 ```cs
 public MarketSeries GetSeries(TimeFrame timeFrame)
