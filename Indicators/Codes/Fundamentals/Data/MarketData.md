@@ -58,7 +58,7 @@ var smaMin30 = Indicators.SimpleMovingAverage(marketSeriesMin30.Close, 14);
 ```
 ---
 ---
-**GetSymbol - return Symbol**
+**GetSymbol - returns Symbol**
 ```cs
 public Symbol GetSymbol(string symbolCode)
 
