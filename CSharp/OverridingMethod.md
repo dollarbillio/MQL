@@ -1,6 +1,7 @@
 **Overriding Method**
 * The class that inherits from the super class, if they have the same method, will have its method overriding that of the super class
 ---
+
 ```cs
 Class Chef
 {
