@@ -8,8 +8,19 @@ Indicator
 ---
 Condition:
 1) If the candle is normal spread
-+ if ```totallyInside```: (lastHigh <= twoLastHigh) && (lastLow >= twoLastLow)
+
++ if ```totallyInside```: 
+  + When a candle has its low updated as **new** ```lowestLow```, we first need to check if the spread of the candle is too small.
+    If the current candle is too small (<= 2.5 pips), we need to take the high of the previous candle. This is done in order to verify   
+    better inside candle. In case that the previous candle is too big spread. We will create an artificial spread: lowestLow + 3 pips
+    We name these: lowestLow and followingHigh, highestHigh and followingLow
+    + => ```totallyInsideBear```: (lastHigh <= followingHigh) && (lastLow >= lowestLow) [sell momentum]
+    + => ```totallyInsideBull```: (lastHigh <= highestHigh) && (lastLow >= followingLow) [buy momentum] 
   + Do nothing
+
++ if ```CloseInside```: 
+  + 
+
 
 + if ```CloseOutside```
   + If ```notEngulfing```: not (lastHigh >= twoLastHigh && lastLow <= twoLastLow) 
