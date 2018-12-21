@@ -1,4 +1,4 @@
-* MqlDateTime
+**```MqlDateTime```**
 ```mq5
 // Tis A Default Constructor
 MyDateClass::MyDateClass(void)
@@ -24,5 +24,13 @@ datetime  TimeCurrent();
 // call with MqlDateTime parameter
 datetime  TimeCurrent( 
    MqlDateTime&  dt_struct      // structure type variable 
+   );
+```
+---
+**```TimeToString()```**
+```mq5
+string  TimeToString( 
+   datetime  value,                           // number 
+   int       mode=TIME_DATE|TIME_MINUTES      // output format 
    );
 ```
