@@ -15,3 +15,14 @@ MyDateClass::MyDateClass(void)
   Print(__FUNCTION__);
 }
 ```
+---
+**```TimeCurrent()```**: the last known server time
+```mq5
+// call with no parameter
+datetime  TimeCurrent();
+
+// call with MqlDateTime parameter
+datetime  TimeCurrent( 
+   MqlDateTime&  dt_struct      // structure type variable 
+   );
+```
