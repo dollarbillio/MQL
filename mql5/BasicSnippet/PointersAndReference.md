@@ -1,6 +1,6 @@
 * Both are ways to connect to variable
-* ```variable0``` once referenced to ```variable1 (memoryAdress1)``` **can't** be referenced to ```variable2(memoryAddress2)``` as it is fixed to ```variable1(memoryAddress1)```. ```ValueReference```can't move around.
-* ```pointer0``` once referenced to ```pointer1(currently pointing to memoryAddress1)``` **can** be referenced to ```pointer2 (currently pointing to memoryAddress2)``` which in effect makes all three pointers point to the same ```memoryAddress2```. Any changes of value made by one of the pointers will change the value referred by other pointers.
+* ```variable0``` once referenced to ```variable1(memoryAdress1)``` **can't** be referenced to ```variable2(memoryAddress2)``` as it is fixed to ```variable1(memoryAddress1)```. ```ValueReference``` can't move around.
+* ```pointer0``` once referenced to ```pointer1(currently pointing to memoryAddress1)``` **can** be referenced to ```pointer2 (currently pointing to memoryAddress2)``` which in effect makes all three pointers point to the same ```memoryAddress2```. Any changes of dereferenced value made by one of the pointers will change the dereferenced value referred by other pointers.
 ---
 **Reference**
 ```cpp
