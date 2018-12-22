@@ -1,6 +1,6 @@
 * Both are ways to connect to variable
 ---
-* Reference
+**Reference**
 ```cpp
 // the variable is referred to x, meaning when two of them are connected
 // unlike pointers that can move around, once you refer to something, you can't
@@ -62,7 +62,7 @@ void passByRef(int & ref)
 printf (* ptr);
 ```
 ---
-* PassByPointer
+* PassByPointer()
 ```cpp
 // prototyping
 void passByPtr(int * ptr);
@@ -99,7 +99,7 @@ void passByPtr(int * ptr)
   *ptr = 7;
 }
 ```
-* PassByPointerReference
+* PassByPointerReference()
 ```cpp
 void passByPtr(int * & ptrRef)
 {
