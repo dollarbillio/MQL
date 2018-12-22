@@ -1,6 +1,5 @@
 * Both are ways to connect to variable
 ---
-```
 * Reference
 ```cpp
 // the variable is referred to x, meaning when two of them are connected
@@ -9,7 +8,6 @@
 
 // ref is referred to x
 <datatype> int & ref = x;
-
 ```
 ---
 * PassByValue()
@@ -53,7 +51,7 @@ void passByRef(int & ref)
 ```
 ---
 **POINTER**
-
+```cpp
 // - There is a variable, with a pointer 
 // - The pointer is pointing at a variable x address in memory
 // - The pointer contains the address of x
@@ -62,6 +60,7 @@ void passByRef(int & ref)
 // - Print the value of ptr under x address 
 //    aka dereference pointer
 printf (* ptr);
+```
 ---
 * PassByPointer
 ```cpp
