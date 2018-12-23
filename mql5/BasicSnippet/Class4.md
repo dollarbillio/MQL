@@ -2,8 +2,8 @@
 ---
 * If a default constructor is **not declared in the base class**, and at the same time one or more constructors 
 with parameters are declared, **always call one of the base class constructors** in the initialization list. 
-* ```BaseClass Constructor``` will be **called first during object initialization, no matter where in the 
-initialization list it is located
+* ```BaseClass Constructor``` will be **called first during object initialization**, no matter where in the 
+initialization list **it is located**
 ---
 ```cpp
 //+------------------------------------------------------------------+ 
