@@ -1,3 +1,4 @@
+```cpp
 //+------------------------------------------------------------------+ 
 //| A class with a default constructor                               | 
 //+------------------------------------------------------------------+ 
@@ -48,3 +49,4 @@ void OnStart()
    //delete pfoo8;  // You do not need to delete pfoo8 explicitly, since it points to the automatically created object foo1 
    //delete pfoo9;  // You do not need to delete pfoo9 explicitly. since it points to the same object as pfoo7 
   }
+```
