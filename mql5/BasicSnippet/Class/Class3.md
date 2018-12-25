@@ -1,4 +1,5 @@
-# Initialization list
+## Initialization list
+---
 **CHERNO PROJECT**
 ---
 * Initialization list is used in the constructor
