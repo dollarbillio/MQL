@@ -9,7 +9,7 @@
 //  refer to others
 
 // ref is referred to x
-<datatype> int & ref = x;
+<datatype> int& ref = x;
 ```
 ---
 * PassByValue()
@@ -46,7 +46,7 @@ int main()
 
 // - This function says that int & ref = x
 //    so ref is referred to x. When ref is changed, x will also changed
-void passByRef(int & ref)
+void passByRef(int& ref)
 {
   ref = 20;
 }
