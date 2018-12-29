@@ -1,3 +1,5 @@
+**CLASS**:
+* By default, all things in class are private, meaning 
 
 ```mq5
 //+------------------------------------------------------------------+
