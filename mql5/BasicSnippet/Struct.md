@@ -1,6 +1,7 @@
 *  ```Struct``` could be similar to ```Class```
 - By Default, things in ```Struct``` are public
-- We should use ```struct``` when it represent structure of data and **methods** to manipulate those data
+- We should use ```struct``` when it represent **structure of data** and **methods** to manipulate those data
+  - Could be Data grouped together because of similar characteristics
 
 * In the code below,
   * ```Animal``` is the parent class, ```Dog``` and ```Cat``` are children of ```Animal```
