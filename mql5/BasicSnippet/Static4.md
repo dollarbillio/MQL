@@ -1,6 +1,7 @@
 ```Static``` Method in Class
 * Work with only **```static variables```** in class
-* This is because ```static method``` don't have access to ```ClassInstance``` variables 
+* This is because ```static method``` doesn't have a ```ClassInstance```
+* ```non static method``` has ```ClassInstance``` as a parameter like ```self``` in python
 ```cpp
 #include <iostream>
 
