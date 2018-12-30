@@ -54,7 +54,6 @@ int main()
 ```
 ---
 * Explicit and Implicit Call of Parametric Constructor
----
 ```cpp
 class CFoo
 {
