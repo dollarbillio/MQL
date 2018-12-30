@@ -1,3 +1,58 @@
+* Constructor is used to initialize an instance memory
+* if an instance is not initialized, it can't call function in class 
+```cpp
+class Entity
+{
+public:
+  float X, Y;
+  
+  // Doesn't have return type
+  Entity(float x, float y)
+  {
+    X = x;
+    Y = y;
+  }
+  
+  void Print()
+  {
+    std::cout << x << ", " << y << std::endl;
+  }
+};
+
+int main()
+{
+  Entity e(10.0f, 5.0f);
+  std::cout << e.X << std::endl;
+  e.Print();
+}
+```
+---
+* A Class Without Constructor can be one with only ```StaticMethod```
+```cpp
+class Log
+{
+public:
+  // this class cannot initialize an instance
+  Log() = delete;
+  
+  static void Write()
+  {
+    
+  }
+}
+
+int main()
+{
+  // This will work
+  Log::Write();  
+  // This will not work
+  Log l;
+  
+  std::cin.get();
+  
+}
+```
+---
 * Explicit and Implicit Call of Parametric Constructor
 ---
 ```cpp
