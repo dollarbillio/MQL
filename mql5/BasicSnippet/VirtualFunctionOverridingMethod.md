@@ -15,7 +15,7 @@ private:
   std::string p_name;
 public:
   Player(const std::string& name)
-    : p_name(name) { // Do things here}
+    : p_name(name) { Do things here}
   
   void Function() override
   {
