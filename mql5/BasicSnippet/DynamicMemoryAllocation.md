@@ -11,3 +11,8 @@ Entity* e = new Entity();
 ---
 * Normally **initialize** <-  you give it a name (such as Entity* e where "e" is the name of the pointer variable) 
 * Here **initialize** ```Entity``` <- **dynamic memory** that is **only accessible** through **a pointer** instead of being able to call it by **it's name**
+---
+* From ```pointer``` directly to ```Function()``` 
+```cpp
+std::cout << e->GetName() << std::endl;
+```
