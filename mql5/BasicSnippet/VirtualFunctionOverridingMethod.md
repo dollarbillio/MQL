@@ -14,10 +14,9 @@ class Player : public Entity
 private:
   std::string p_name;
 public:
-  Player(const std::string* name)
-    : p_name(name)
-  {
-  }
+  Player(const std::string& name)
+    : p_name(name) { // Do things here}
+  
   void Function() override 
   {
     std::cout << p_name << std::endl;
