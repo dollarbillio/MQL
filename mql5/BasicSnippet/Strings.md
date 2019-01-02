@@ -1,4 +1,4 @@
-http://www.cplusplus.com/reference/string/string/
+* http://www.cplusplus.com/reference/string/string/
 ---
 * Create new string
 ```cpp
@@ -9,6 +9,11 @@ int main
   std::string name = "Cherno"
   // string concatenation
   std::string name = std::string("Cherno") + " hello!";
+  
+  // string concatenation in another way
+  std::string name = "Cherno";
+  // overloading smth
+  name += "Hi";
 }
 ```
 * Remember to call reference when passing on ```string``` input if the function doesn't return anything otherwise it will create a copy and waste of memory
