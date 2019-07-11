@@ -1,3 +1,11 @@
+**```ArraySetAsSeries```**: The function sets the AS_SERIES flag to a selected object of a dynamic array, and elements will be indexed like in timeseries. The function returns true on success, otherwise  - false.
+```mq5
+bool  ArraySetAsSeries( 
+   const void&  array[],    // array by reference 
+   bool         flag        // true denotes reverse order of indexing 
+   );
+```
+
 **```struct MqlTradeResult```**: The Price (Open, Close, High, Low), the Time, the Volumes of each bar and the spread for a symbol is stored in this structure.  Any array declared to be of the MqlRates type can be used to store the price, volumes and spread history for a symbol.
 ```mq5
 struct MqlRates
