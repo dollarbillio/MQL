@@ -1,3 +1,68 @@
+**```struct MqlTradeResult```**: The Price (Open, Close, High, Low), the Time, the Volumes of each bar and the spread for a symbol is stored in this structure.  Any array declared to be of the MqlRates type can be used to store the price, volumes and spread history for a symbol.
+```mq5
+struct MqlRates
+  {
+   datetime time;         // Period start time
+   double   open;         // Open price
+   double   high;         // The highest price of the period
+   double   low;          // The lowest price of the period
+   double   close;        // Close price
+   long     tick_volume;  // Tick volume
+   int      spread;       // Spread
+   long     real_volume;  // Trade volume
+  };
+```
+
+**```struct MqlTradeResult```**: Any variable declared to be of MqlTradeResult type will be able to access the trade request results.
+```mq5
+struct MqlTradeResult
+  {
+   uint     retcode;          // Operation return code
+   ulong    deal;             // Deal ticket, if it is performed
+   ulong    order;            // Order ticket, if it is placed
+   double   volume;           // Deal volume, confirmed by broker
+   double   price;            // Deal price, confirmed by broker
+   double   bid;              // Current Bid price
+   double   ask;              // Current Ask price
+   string   comment;          // Broker comment to operation (by default it is filled by the operation description)
+  };
+```
+
+**```struct MqlTradeRequest```**: Any variable declared to be of the MqlTradeRequest type can be used to send orders for our trade operations
+```mq5
+struct MqlTradeRequest
+  {
+   ENUM_TRADE_REQUEST_ACTIONS    action;       // Trade operation type
+   ulong                         magic;        // Expert Advisor ID (magic number)
+   ulong                         order;        // Order ticket
+   string                        symbol;       // Trade symbol
+   double                        volume;       // Requested volume for a deal in lots
+   double                        price;        // Price
+   double                        stoplimit;    // StopLimit level of the order
+   double                        sl;           // Stop Loss level of the order
+   double                        tp;           // Take Profit level of the order
+   ulong                         deviation;    // Maximal possible deviation from the requested price
+   ENUM_ORDER_TYPE               type;          // Order type
+   ENUM_ORDER_TYPE_FILLING       type_filling;  // Order execution type
+   ENUM_ORDER_TYPE_TIME          type_time;     // Order execution time
+   datetime                      expiration;    // Order expiration time (for the orders of ORDER_TIME_SPECIFIED type)
+   string                        comment;       // Order comment
+  };
+```
+**```struct MqlTick```**: 
+- This is a structure used for storing the latest prices of symbols
+- Any variable declared to be of the MqlTick type can easily be used to obtain the current values of Ask, Bid, Last and Volume once you call the SymbolInfoTick() function.
+```mq5
+struct MqlTick
+  {
+   datetime     time;          // Time of the last prices update
+   double       bid;           // Current Bid price
+   double       ask;           // Current Ask price
+   double       last;          // Price of the last deal (Last)
+   ulong        volume;        // Volume for the current Last price
+  };
+```
+
 **```int iRSI()```**: Relative Strength Index. Use ```CopyBuffer()```
 ```mq5
 int  iRSI( 
