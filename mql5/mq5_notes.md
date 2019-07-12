@@ -1,3 +1,24 @@
+**```ArrayResize```**: Change size of dynamic array
+```mq5
+double myDynamic[];
+ArrayResize(myDynamic,3);
+myDynamic[0] = 1.50;
+```
+**```PositionGetInteger```**:
+- When used with POSITION_TYPE -> return the current open position as POSITION_TYPE_BUY or POSITION_TYPE_SELL
+```mq5
+long  PositionGetInteger(
+   ENUM_POSITION_PROPERTY  property_id      // Property identifier
+   );
+```
+
+**```PositionSelect```**: Return true for false if any position exists for the symbol
+```mq5
+bool  PositionSelect(
+   string  symbol      // Symbol name 
+ );
+ ```
+
 **```ArraySetAsSeries```**: The function sets the AS_SERIES flag to a selected object of a dynamic array, and elements will be indexed like in timeseries. The function returns true on success, otherwise  - false.
 ```mq5
 bool  ArraySetAsSeries( 
